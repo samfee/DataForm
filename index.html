@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Sample App</title>
+
+	<!-- jQuery Mobile Stylesheet -->
+	<link rel="stylesheet" href="./jquery/jquery.mobile-1.4.5.min.css" />
+
+</head>
+<body>
+	
+	<!-- Insert Custom Codiqa HTML here. -->
+	<div data-role="page" data-control-title="Home" id="page1">
+		<div data-theme="a" data-role="header" data-position="fixed">
+			<h3>
+				Sample App
+			</h3>
+		</div>
+		<div data-role="content">
+			<form id="SampleForm" enctype="multipart/form-data">
+				<div class="ui-grid-b">
+					
+					<div data-role="fieldcontain" data-controltype="textinput">
+						<label for="latitude">
+							Latitude
+						</label>
+						<input name="" id="latitude" placeholder="" value="" type="text" disabled>
+					</div>
+					<div data-role="fieldcontain" data-controltype="textinput">
+						<label for="longitude">
+							Longitude
+						</label>
+						<input name="" id="longitude" placeholder="" value="" type="text" disabled>
+					</div>
+					<div data-role="fieldcontain" data-controltype="textinput">
+						<label for="Field1">
+							Field1
+						</label>
+						<input name="" id="Field1" placeholder="" value="" type="text">
+					</div>
+					<div data-role="fieldcontain" data-controltype="textinput">
+						<label for="Field2">
+							Field2
+						</label>
+						<input name="" id="Field2" placeholder="" value="" type="text">
+					</div>
+					<div data-role="fieldcontain" data-controltype="textinput" id="picture-display">
+						<label for="Field3">
+							Field3
+						</label>
+						<input name="" id="take-picture" placeholder="" value="" type="file" accept="image/*">
+					</div>
+					<div class="ui-block-a" id="meh1" style="padding-bottom:5px;">
+						<!--onclick="loadOptions()"-->
+						<div data-role="fieldcontain" style="padding-right:15%;">
+							<fieldset data-role="controlgroup">
+								<input type="submit" data-theme="b" value="Save Locally"/>
+							</fieldset>
+						</div>
+					</div>
+					<div class="ui-block-b">
+						<div data-role="fieldcontain" style="padding-right:8%;">
+							<fieldset data-role="controlgroup">
+								<button id="sync-btn" data-theme="b">Sync Database</button>
+								<p class="result"></p>
+							</fieldset>
+						</div>
+					</div>
+					<div class="output"></div>
+				</div>
+			</form>
+		</div>
+	</div>
+	<!-- / Custom Codiqa Code -->
+
+
+<!-- jQuery Library -->
+<script src="./jquery/jquery.min.js"></script>
+
+<!-- jQuery Mobile Library -->
+<script src="./jquery/jquery.mobile-1.4.5.min.js"></script>
+
+<!-- SQL Boilerplate -->
+<script src="./sql_boilerplate.js"></script>
+
+<!-- Camera API -->
+<script src="./extras/camera.js"></script>
+
+<!-- Geolocation API -->
+<script src="./extras/geolocation.js"></script>
+
+</body>
+</html>
