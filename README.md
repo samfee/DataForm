@@ -130,3 +130,16 @@ You can see that it now has four inputs in each section. For each input that you
 
 ##Adding Geolocation
 The Geolocation API is a newer feature that browsers have recently begun to implement. The user is promoted to share his or her location with the website, and then location data is provided in return. At minimum, latitude and longitude are returned, but other data such as altitude can be included. For more information, read the Geolocation API documentation.
+
+To use this implementation of geolocation, be sure to include the geolocation source file in your index.html page. 
+Geolocation works by first checking to make sure that it is supported in the browser.
+
+````
+if(navigator.geolocation) {
+ // Do something
+}
+````
+
+If it is supported, ````getCurrentPosition()```` is called. The user is prompted to accept that their location be disclosed. If it is not supported, the inputs that would normally display longitude and latitude instead display the reason that location could not be found. 
+
+The getCurrentPosition function has two parameters: a success function and a failure function. If latitude and longitude are successfully returned, then the success function is called. If not, the fail function is called. If it fails, the inputs will display the reason that location could not be determined. If successful, the latitude and longitude are displayed as non-editable values in the inputs.
